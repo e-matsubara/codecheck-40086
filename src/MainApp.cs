@@ -10,24 +10,23 @@ public class MainApp {
 	private const string ALIGN = "align";
 
 	static public void Main( string[] args ) {
-		Console.WriteLine( args[ 0 ] );
-			// コマンドの取り出し
-		string[] commandList = args[ 0 ].Split( ' ' );
-		string subCommand = args[ 0 ];
-		string target = args[ 1 ];
+		// コマンドの取り出し
+		string[] commandList = args[ 0 ].Split( '\n' );
+		string subCommand = commandList[ 0 ];
+		string target = commandList[ 1 ];
 
-			switch( subCommand ) {
-				case DECODE:
-					Console.WriteLine( decode( target ) );
-					break;
-				case ENCODE:
-					Console.WriteLine( encode( int.Parse( target ) ) );
-					break;
-				case ALIGN:
-					break;
-				default :
-					break;
-			}
+		switch( subCommand ) {
+			case DECODE:
+				Console.WriteLine( decode( target ) );
+				break;
+			case ENCODE:
+				Console.WriteLine( encode( int.Parse( target ) ) );
+				break;
+			case ALIGN:
+				break;
+			default :
+				break;
+		}
 
 	}
 
