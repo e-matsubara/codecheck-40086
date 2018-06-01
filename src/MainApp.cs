@@ -10,8 +10,6 @@ public class MainApp {
 	private const string ALIGN = "align";
 
 	static public void Main( string[] args ) {
-		string line = Console.ReadLine();
-		Console.WriteLine( line );
 		Console.WriteLine( args[ 0 ] );
 			// コマンドの取り出し
 		string[] commandList = line.Split( ' ' );
