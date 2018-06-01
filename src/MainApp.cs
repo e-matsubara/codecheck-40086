@@ -12,7 +12,7 @@ public class MainApp {
 	static public void Main( string[] args ) {
 		Console.WriteLine( args[ 0 ] );
 			// コマンドの取り出し
-		string[] commandList = line.Split( ' ' );
+		string[] commandList = args[ 0 ].Split( ' ' );
 		string subCommand = args[ 0 ];
 		string target = args[ 1 ];
 
